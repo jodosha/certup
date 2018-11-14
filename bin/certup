@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift File.expand_path(File.join(__dir__, "..", "lib"))
+require "certup"
+
+hostname = ARGV[0]
+raise ArgumentError.new("\n\nUSAGE:\n\t#{__FILE__} hostname\n\tGiven: #{hostname.inspect}") if hostname.nil? || hostname.match?(/\A[[:space:]]*\z/)
+
+Certup.call(hostname: hostname)
