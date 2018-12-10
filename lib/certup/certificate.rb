@@ -5,7 +5,7 @@ module Certup
     attr_reader :hostname, :server, :chain, :private_key
 
     def initialize(hostname:, server:, chain:, private_key:)
-      @hostname    = hostname.freeze
+      @hostname    = hostname.sub(/\Awww\./, "").freeze
       @server      = server.freeze
       @chain       = chain.freeze
       @private_key = private_key.freeze

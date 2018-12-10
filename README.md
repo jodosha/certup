@@ -18,6 +18,8 @@ Generate DNSimple **account token** and Netifly token and add them to `.env`.
 bin/certup my.website.org
 ```
 
+Note: if you're using a root domain, you still need to lead the request with `www`. Eg. `bin/certup www.website.org`.
+
 ## Copyright
 
 &copy; 2018 - Luca Guidi https://lucaguidi.com
